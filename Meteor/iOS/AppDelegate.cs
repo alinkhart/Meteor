@@ -1,5 +1,8 @@
 ﻿using Foundation;
 using UIKit;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace Meteor.iOS {
     // The UIApplicationDelegate for the application. This class is responsible for launching the
@@ -16,7 +19,7 @@ namespace Meteor.iOS {
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions) {
             App.Initialize();
 
-
+            AppCenter.Start("945b7731-62a8-40f1-966b-9aa6d057e7ab", typeof(Analytics), typeof(Crashes));
 
             return true;
         }
