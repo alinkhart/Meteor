@@ -5,6 +5,7 @@ namespace Meteor {
         public Item Item { get; set; }
         public ItemDetailViewModel(Item item = null) {
             if (item != null) {
+                item = null;
                 Title = item.Text;
                 Item = item;
             }
